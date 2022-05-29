@@ -16,7 +16,7 @@ public class Main {
 		Map<String, String> map = null;
 		map.put("1", "majid");
 		map.put("2", "aziz");
-		map.put("3", "Umair");
+		map.put("3", "Nazim");
 		itMap(map);
 		
 		 try {
