@@ -22,8 +22,6 @@ public class Main {
 		
 		 try {
             FileOutputStream fos = new FileOutputStream("");
-
-
             fos.write(fileData);
             fos.close();
         } catch (java.io.IOException e) {
