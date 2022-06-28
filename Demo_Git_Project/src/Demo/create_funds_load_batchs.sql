@@ -1,4 +1,5 @@
 --Greenplum
+
 BEGIN WORK;
 create table funds_load_batchs
   (
