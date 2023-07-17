@@ -31,6 +31,26 @@ def build_list_of_java_testcase_files(directory):
 
 	return files_to_check
 
+def build_list_of_java_testcase_filess(directory):
+
+	files_to_check = []
+	for root, dirs, files in os.walk(directory):
+		for name in files:
+			result = re.search(py_common.get_primary_testcase_filename_regex(), name, re.IGNORECASE)
+
+			if result != None:
+				files_to_check.append(os.path.realpath(os.path.join(root,name)))
+
+		# don't enumerate files in .svn dirs
+		if '.svn' in dirs: 
+			dirs.remove('.svn')
+
+		# don't enumerate files in support directories
+		if 'testcasesupport' in dirs:
+			dirs.remove('testcasesupport')
+
+	return files_to_check
+
 def update_file(file_path, file, tag_start, tag_end, lines):
 
 	full_file_path = os.path.join(file_path, file)

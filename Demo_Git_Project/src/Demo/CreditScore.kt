@@ -51,6 +51,12 @@ class CreditScore : MCPBaseFragment, DataFetcherCallback {
         binding = DataBindingUtil.bind(contentView)!!
         return binding.root
     }
+	
+	override fun onCreateViews(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        contentView = inflater.inflate(R.layout.fragment_credit_score, container, false)
+        binding = DataBindingUtil.bind(contentView)!!
+        return binding.root
+    }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)

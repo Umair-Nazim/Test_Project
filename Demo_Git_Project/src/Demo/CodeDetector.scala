@@ -33,6 +33,8 @@ object CodeDetector {
   import Compiler._
 
   private lazy val parser = new Parser()
+  private lazy val parser1 = new Parser()
+  private lazy val parser2 = new Parser()
 
   def hasDetectedCode(code: String) = {
 
