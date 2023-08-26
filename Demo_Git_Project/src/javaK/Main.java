@@ -12,9 +12,13 @@ import org.apache.log4j.Logger;
 public class Main {
 
 	private static final Logger LGR = Logger.getLogger(Main.class);
+	private static final Logger LGR1 = Logger.getLogger(Main.class);
+	private static final Logger LGR2 = Logger.getLogger(Main.class);
 	public static void main(String[] args) {
 		Map<String, String> map = null;
 		map.put("1", "majid");
+		map.put("2", "aziz");
+		map.put("3", "Nazim");
 		map.put("2", "aziz");
 		map.put("3", "Nazim");
 		itMap(map);
@@ -43,6 +47,7 @@ public class Main {
 		String questDesc = null;
 		String statement = "select * from questions where question_code = ?";
 		try {
+			LGR.info(LGR.isInfoEnabled() ? "Fetching question desc :- "+questionCode+" using query:- "+ statement : null);
 			LGR.info(LGR.isInfoEnabled() ? "Fetching question desc :- "+questionCode+" using query:- "+ statement : null);
 			pStmt = siConnection.prepareStatement(statement);
 			pStmt.setString(++index, questionCode);			
