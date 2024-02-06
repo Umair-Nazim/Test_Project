@@ -1,0 +1,7 @@
+on:
+  pull_request:
+    types:
+      - opened
+jobs:
+    steps:
+      - run: echo "The head of this PR starts with 'releases/'
