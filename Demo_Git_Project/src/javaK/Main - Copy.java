@@ -21,6 +21,11 @@ public class Main {
 		map.put("3", "Nazim");
 		map.put("2", "aziz");
 		map.put("3", "Nazim");
+		map.put("1", "majid");
+		map.put("2", "aziz");
+		map.put("3", "Nazim");
+		map.put("2", "aziz");
+		map.put("3", "Nazim");
 		itMap(map);
 		
 		 try {
@@ -60,6 +65,29 @@ public class Main {
 		}
 
 		
+		return questDesc;
+	}
+	
+	public static String fetchQuestionDesc2(String questionCode, Connection siConnection) throws SQLException {
+		PreparedStatement pStmt = null;
+		ResultSet rs = null;
+		int index = 0;
+		String questDesc = null;
+		String statement = "select * from questions where question_code = ?";
+		try {
+			LGR.info(LGR.isInfoEnabled() ? "Fetching question desc :- "+questionCode+" using query:- "+ statement : null);
+			LGR.info(LGR.isInfoEnabled() ? "Fetching question desc :- "+questionCode+" using query:- "+ statement : null);
+			pStmt = siConnection.prepareStatement(statement);
+			pStmt.setString(++index, questionCode);			
+			rs = pStmt.executeQuery();
+			if (rs.next()){
+				questDesc = rs.getString(1);
+			} 
+		}catch(Exception e) {
+			LGR.error(e);
+		}
+
+		System.out.println("This Is a Print statement");
 		return questDesc;
 	}
 	
