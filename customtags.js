@@ -1,0 +1,1 @@
+function closeDialogPopup(a){jQuery("#"+a).dialog("close")}function openDialogPopup(a){var b=jQuery("#"+a);b&&""==b.html()&&b.html(jQuery("#"+a).data("backup"));jQuery("#"+a).dialog("open");jQuery("#firstTime_"+a).val("N")}function clearDivContent(a){var b=jQuery("#firstTime_"+a).val();!b||void 0!=b&&"Y"==b||jQuery("#"+a).html("")};
