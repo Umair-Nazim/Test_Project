@@ -3575,6 +3575,14 @@ html body #wrapper script { display: none !important; }
 .remove-gift-card-dialog .info .card_number{color: #000;font-weight:normal}
 .remove-gift-card-dialog .dialog-close:hover,.remove-gift-card-dialog .dialog-close:focus{color: #868484;}
 
+/*Styles for Remove Gift*/
+.block-request-card .block-card-link + .remove-gift-card-link {margin-left: 10px;}
+.block-request-card .remove-gift-card-link .icon-remove-gift-card{font-size: 15px;position: relative;top: 2px;}
+.remove-gift-card-dialog .ui-dialog-content.generic-dialog{padding: 52px 55px !important;}
+.remove-gift-card-dialog .dialog-close{position: absolute;top: 20px;right: 20px;color: #AEAEAE;}
+.remove-gift-card-dialog .info .card_number{color: #000;font-weight:normal}
+.remove-gift-card-dialog .dialog-close:hover,.remove-gift-card-dialog .dialog-close:focus{color: #868484;}
+
 /* Card Registratin - Via Email */
 .img-card-holder.register-user.register-email{padding: 0 !important;}
 .img-card-holder.register-user.register-email .card-icon-holder img{width: 100%;}
